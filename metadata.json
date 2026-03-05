@@ -1,0 +1,5 @@
+{
+  "name": "Calculadora de Edad Exacta",
+  "description": "Calcula la edad exacta en años, meses y días entre una fecha de nacimiento y una fecha de cita.",
+  "requestFramePermissions": []
+}
