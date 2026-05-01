@@ -6,6 +6,10 @@ import { CalendarDays, User, Calculator, CalendarHeart } from 'lucide-react';
 import DatePicker, { registerLocale } from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import { es } from 'date-fns/locale/es';
+import Image from 'next/image';
+
+// Se importa la imagen directamente para que webpack y Vercel la procesen correctamente
+import logoImg from '../public/logo.png';
 
 registerLocale('es', es);
 
@@ -65,7 +69,7 @@ export default function AgeCalculator() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="bg-white px-4 py-2 sm:px-6 sm:py-3 rounded-2xl shadow-lg shadow-indigo-100/50 flex items-center justify-center border border-slate-100 transition-transform hover:scale-105"
         >
-          <img src="/logo.png" alt="logo" className="h-12 sm:h-16 object-contain" />
+          <Image src={logoImg} alt="logo" className="h-12 sm:h-16 w-auto object-contain" referrerPolicy="no-referrer" />
         </motion.div>
       </div>
 
