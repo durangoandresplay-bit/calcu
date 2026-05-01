@@ -1,0 +1,4 @@
+Puedes subir los archivos de imagen (como logo.png) en esta carpeta `public`.
+
+Todos los archivos que pongas aquí serán accesibles directamente.
+Por ejemplo, si subes `logo.png` aquí, podrás usarlo en el código como `<img src="/logo.png" />`.
