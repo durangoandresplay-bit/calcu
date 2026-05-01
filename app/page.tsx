@@ -65,11 +65,7 @@ export default function AgeCalculator() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="bg-white px-4 py-2 sm:px-6 sm:py-3 rounded-2xl shadow-lg shadow-indigo-100/50 flex items-center justify-center border border-slate-100 transition-transform hover:scale-105"
         >
-          <img 
-            src="/logo.png" 
-            alt="I.P.S.I. Karaquita" 
-            className="h-12 sm:h-16 object-contain" 
-          />
+          <img src="/logo.png" alt="logo" className="h-12 sm:h-16 object-contain" />
         </motion.div>
       </div>
 
