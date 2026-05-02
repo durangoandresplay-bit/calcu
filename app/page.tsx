@@ -6,14 +6,13 @@ import { CalendarDays, User, Calculator, CalendarHeart } from 'lucide-react';
 import DatePicker, { registerLocale } from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import { es } from 'date-fns/locale/es';
-import Image from 'next/image';
 
 registerLocale('es', es);
 
 export default function AgeCalculator() {
   const [birthDate, setBirthDate] = useState<Date | null>(null);
   
-  const [appointmentDate, setAppointmentDate] = useState<Date | null>(new Date());
+  const [appointmentDate, setAppointmentDate] = useState<Date | null>(null);
 
   let age: { years: number; months: number; days: number } | null = null;
   let error: string | null = null;
@@ -57,19 +56,6 @@ export default function AgeCalculator() {
 
   return (
     <div className="min-h-screen bg-slate-50 flex items-center justify-center p-4 sm:p-6 lg:p-8 font-sans relative">
-      
-      {/* Logo en la esquina superior izquierda */}
-      <div className="absolute top-4 left-4 sm:top-6 sm:left-6 z-50">
-        <motion.div 
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="bg-white px-4 py-2 sm:px-6 sm:py-3 rounded-2xl shadow-lg shadow-indigo-100/50 flex items-center justify-center border border-slate-100 transition-transform hover:scale-105"
-        >
-          <Image src="/logo.png" alt="logo" width={120} height={120} className="h-12 sm:h-16 w-auto object-contain" referrerPolicy="no-referrer" />
-        </motion.div>
-      </div>
-
       <motion.div 
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
