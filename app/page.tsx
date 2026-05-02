@@ -55,12 +55,53 @@ export default function AgeCalculator() {
   const yearsArray = Array.from({ length: endYear - startYear + 1 }, (_, i) => startYear + i);
 
   return (
-    <div className="min-h-screen bg-slate-50 flex items-center justify-center p-4 sm:p-6 lg:p-8 font-sans relative">
+    <div className="min-h-screen bg-gradient-to-br from-[#F5F3FF] via-white to-[#EBE9FE] flex items-center justify-center p-4 sm:p-6 lg:p-8 font-sans relative overflow-hidden">
+      
+      {/* Background Decorations (Fuera de la card) */}
+      <div className="absolute inset-0 pointer-events-none z-0">
+        {/* Abstract Blobs */}
+        <div className="absolute top-[-10%] left-[-10%] w-[40vw] h-[40vw] min-w-[300px] min-h-[300px] rounded-full bg-[#A78BFA] mix-blend-multiply filter blur-[100px] opacity-20 animate-[pulse_8s_ease-in-out_infinite]" />
+        <div className="absolute bottom-[-10%] right-[-5%] w-[45vw] h-[45vw] min-w-[350px] min-h-[350px] rounded-full bg-[#5B3DF5] mix-blend-multiply filter blur-[120px] opacity-10 animate-[pulse_10s_ease-in-out_infinite_reverse]" />
+        <div className="absolute top-[20%] right-[5%] w-[25vw] h-[25vw] min-w-[200px] min-h-[200px] rounded-full bg-purple-300 mix-blend-multiply filter blur-[80px] opacity-[0.15]" />
+
+        {/* Dotted Grid Pattern */}
+        <div className="absolute inset-0 bg-[radial-gradient(#A78BFA_1.5px,transparent_1.5px)] [background-size:30px_30px] opacity-10"></div>
+
+        {/* Floating Glassmorphism Geometric Shapes */}
+        <motion.div 
+          animate={{ y: [0, -25, 0], rotate: [0, 15, 0] }} 
+          transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute top-[15%] left-[8%] w-32 h-32 rounded-full border-[1px] border-[#5B3DF5]/20 bg-gradient-to-tr from-white/60 to-white/20 backdrop-blur-md shadow-[0_8px_32px_rgba(91,61,245,0.05)] hidden sm:block" 
+        />
+        
+        <motion.div 
+          animate={{ y: [0, 30, 0], x: [0, 15, 0] }} 
+          transition={{ duration: 9, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute bottom-[20%] left-[6%] w-24 h-24 rounded-full bg-gradient-to-bl from-[#A78BFA]/30 to-transparent backdrop-blur-sm hidden sm:block" 
+        />
+
+        <motion.div 
+          animate={{ y: [0, -15, 0], rotate: [0, -45, 0] }} 
+          transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+          className="absolute top-[25%] right-[10%] w-16 h-16 rounded-[2rem] border-2 border-[#A78BFA]/30 bg-white/30 backdrop-blur-md hidden lg:block shadow-[0_4px_20px_rgba(167,139,250,0.1)]" 
+        />
+
+        <motion.div 
+          animate={{ scale: [1, 1.1, 1], opacity: [0.3, 0.6, 0.3] }} 
+          transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute bottom-[15%] right-[15%] w-8 h-8 rounded-full bg-[#5B3DF5] blur-[1px] hidden md:block" 
+        />
+        
+        {/* Soft layout curves */}
+        <div className="absolute top-0 right-[25%] w-64 h-32 bg-gradient-to-b from-[#A78BFA]/10 to-transparent rounded-b-[100px] hidden sm:block"></div>
+        <div className="absolute bottom-0 left-[20%] w-80 h-40 bg-gradient-to-t from-[#5B3DF5]/5 to-transparent rounded-t-[150px] hidden sm:block"></div>
+      </div>
+
       <motion.div 
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="max-w-xl w-full bg-white rounded-3xl shadow-xl border border-slate-100 flex flex-col relative"
+        className="max-w-xl w-full bg-white rounded-3xl shadow-xl shadow-[#5B3DF5]/10 border border-slate-100 flex flex-col relative z-10"
       >
         <div className="bg-indigo-600 p-8 text-center rounded-t-3xl border-b border-indigo-700 relative overflow-hidden">
           {/* Decorative background elements */}
